@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
     printf("read mes:%s\n",mes);
 
     char mes2[100];
-    if (mq_receive(mqd,mes2,mqatt.mq_msgsize,0) == -1) {
+    if (mq_receive(mqd,mes2,mqatt.mq_msgsize,2) == -1) {
 
         perror("mq_send\n");
         mq_close(mqd);
@@ -48,7 +48,7 @@ int main(int argc, char const *argv[])
     printf("read mes:%s\n",mes2);
 
     char mes3[100];
-    if (mq_receive(mqd,mes3,mqatt.mq_msgsize,0) == -1) {
+    if (mq_receive(mqd,mes3,mqatt.mq_msgsize,3) == -1) {
 
         perror("mq_send\n");
         mq_close(mqd);

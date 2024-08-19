@@ -31,21 +31,21 @@ int main() {
         return 1;
     }
     
-    // Read from the FIFO
-    num_bytes = read(fd, buffer, sizeof(buffer) - 1);
-    if (num_bytes == -1) {
-        perror("read");
-        close(fd);
-        return 1;
-    }
-    buffer[num_bytes] = '\0';  // Null-terminate the buffer
-    printf("Read from FIFO: %s\n", buffer);
+    // // Read from the FIFO
+    // num_bytes = read(fd, buffer, sizeof(buffer) - 1);
+    // if (num_bytes == -1) {
+    //     perror("read");
+    //     close(fd);
+    //     return 1;
+    // }
+    // buffer[num_bytes] = '\0';  // Null-terminate the buffer
+    // printf("Read from FIFO: %s\n", buffer);
 
-    // Close the FIFO
-    if (close(fd) == -1) {
-        perror("close");
-        return 1;
-    }
+    // // Close the FIFO
+    // if (close(fd) == -1) {
+    //     perror("close");
+    //     return 1;
+    // }
 
     return 0;
 }

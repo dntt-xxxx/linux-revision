@@ -23,7 +23,9 @@ int main(void) {
     dup_fd = dup2(fd,1);
     sprintf(mess, "dup_fd = %d\n",dup_fd);
     printf("DOTU\n");
+    printf("fd=%d\n",fd);
     write(dup_fd,mess,strlen(mess));
     close(fd);
     return 0;
 }
+
